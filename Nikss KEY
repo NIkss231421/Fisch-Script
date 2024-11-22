@@ -5,7 +5,7 @@ local Window = OrionLib:MakeWindow({Name = "Nikss HUB KEY", HidePremium = true, 
 
 OrionLib:MakeNotification({
     Name = "Nikss HUB Key",
-    Content = "Key In Discord nik#3699",
+    Content = "Key In Discord nik3699",
     Image = "rbxassetid://4483345998",
     Time = 5
 })
