@@ -12,7 +12,7 @@ _G.Key = "My_Show" -- Você coloca sua chave aqui
 _G.KeyInput = "string"
 
 function MakeScriptHub()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/NIkss231421/Fisch-Script/main/--%20Nikss%20HUB%20Fisch%20--.txt"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NIkss231421/Fisch-Script/refs/heads/main/--%20Nikss%20HUB%20Fisch%20--.txt"))()
 end
 
 function CorrectKeyNotifications()
@@ -22,12 +22,13 @@ function CorrectKeyNotifications()
         Image = "rbxassetid://4483345998",
         Time = 5
     })
+    Window:Hide() -- Esconder a janela quando a chave estiver correta
 end
 
 function WrongKeyNotifications()
     OrionLib:MakeNotification({
         Name = "Wrong Key",
-        Content = "Sua senha esta errada vc e amigo do Nikss?",
+        Content = "Sua senha está errada. Você é amigo do Nikss?",
         Image = "rbxassetid://4483345998",
         Time = 5
     })
@@ -64,18 +65,16 @@ Tab:AddButton({
     Name = "Discord",
     Callback = function()
         -- Função para copiar texto para a área de transferência
-local function copyToClipboard(text)
-    if setclipboard then
-        setclipboard(text)
-        print("Texto copiado para a área de transferência: " .. text)
-    else
-        print("Não foi possível copiar o texto para a área de transferência.")
-    end
-end
+        local function copyToClipboard(text)
+            if setclipboard then
+                setclipboard(text)
+                print("Texto copiado para a área de transferência: " .. text)
+            else
+                print("Não foi possível copiar o texto para a área de transferência.")
+            end
+        end
 
--- Exemplo de uso para copiar o texto "discord"
-copyToClipboard("https://discord.gg/9ER6CcBHAQ")
+        -- Exemplo de uso para copiar o texto "discord"
+        copyToClipboard("https://discord.gg/9ER6CcBHAQ")
     end    
 })
-
-
