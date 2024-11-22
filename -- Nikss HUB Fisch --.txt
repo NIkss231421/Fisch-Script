@@ -3774,6 +3774,16 @@ MiscPlayer = Tap.Player:AddSection('Misc Player') do
 			end
 		end
 	end)
+
+    -- Teleporting button for "Infinite Wild"
+    MiscPlayer:AddButton({
+        Title = "Infinite Wild",
+        Description = "Infinite Wild Script",
+        Callback = function()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+        end
+    })
+
 	
 	MiscPlayer:AddButton({
 		Title = "Rejoin Server",
@@ -3834,6 +3844,16 @@ Shoppy:AddButton({
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(715.71978775976562, 167.53297424316406, 332.03369140625)
     end
 })
+
+-- Teleporting button for "Trident Rod"
+Shoppy:AddButton({
+    Title = "Trident Rod",
+    Description = "Cost [150.000C$]",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1483.99304, -225.975464, -2201.59741)
+    end
+})
+
 
 -- Teleporting button for "Mapa do Tesouro"
 Shoppy:AddButton({
@@ -4082,6 +4102,14 @@ Teleporting:AddButton({
     end
 })
 
+-- Teleporting button for "Desolate Deep"
+Teleporting:AddButton({
+    Title = "Desolate Deep",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1654.9647216796875, -214.18600463867188, -2857.513916015625)
+    end
+})
+
 -- Teleporting button for "Forsaken Shores"
 Teleporting:AddButton({
     Title = "Forsaken Shores",
@@ -4189,10 +4217,10 @@ do
 			writefile(tostring(LocalPlayer.UserId).."ALC.txt", tostring(v))
 		end)
 		Settings_M:AddButton({
-			Title = "Join Normal Hub Discord",
+			Title = "Join Discord Nikss HUB",
 			Description = "Click to join",
 			Callback = function()
-                setclipboard("discord")
+                setclipboard("https://discord.gg/9ER6CcBHAQ")
 			end,
 		})
 	end
