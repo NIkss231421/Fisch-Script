@@ -1,29 +1,24 @@
---[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "KeySystem", HidePremium = true, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Nikss HUB KEY", HidePremium = true, SaveConfig = true, ConfigFolder = "Orion"})
 
 OrionLib:MakeNotification({
-	Name = "Nikss HUB Key",
-	Content = "Key In Discord nik#3699",
-	Image = "rbxassetid://4483345998",
-	Time = 5
+    Name = "Nikss HUB Key",
+    Content = "Key In Discord nik#3699",
+    Image = "rbxassetid://4483345998",
+    Time = 5
 })
 
-_G.Key = "My_Show" -- You Put Your Key Here
+_G.Key = "My_Show" -- Você coloca sua chave aqui
 _G.KeyInput = "string"
 
 function MakeScriptHub()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/NIkss231421/Fisch-Script/refs/heads/main/--%20Nikss%20HUB%20Fisch%20--.txt')))(), true))() -- You Put Your Script Here
-
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NIkss231421/Fisch-Script/main/--%20Nikss%20HUB%20Fisch%20--.txt"))()
 end
-
 
 function CorrectKeyNotifications()
     OrionLib:MakeNotification({
         Name = "Correct Key",
-        Content = "Welcome To The LEAN PARTY :D",
+        Content = "Iniciando Nikss HUB",
         Image = "rbxassetid://4483345998",
         Time = 5
     })
@@ -31,37 +26,56 @@ end
 
 function WrongKeyNotifications()
     OrionLib:MakeNotification({
-        Name = " Wrong Key",
-        Content = "Your Not on The List Kid",
+        Name = "Wrong Key",
+        Content = "Sua senha esta errada vc e amigo do Nikss?",
         Image = "rbxassetid://4483345998",
         Time = 5
     })
 end
 
 local Tab = Window:MakeTab({
-	Name = "Key Room",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+    Name = "Nikss KEY",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
 })
 
 Tab:AddTextbox({
-	Name = "Enter Key",
-	Default = "Enter Key",
-	TextDisappear = true,
-	Callback = function(Value)
+    Name = "Enter Key",
+    Default = "",
+    TextDisappear = true,
+    Callback = function(Value)
         _G.KeyInput = Value
-	end	  
+    end   
 })
 
 Tab:AddButton({
-	Name = "Check Key!",
-	Callback = function()
+    Name = "Check Key!",
+    Callback = function()
         if _G.KeyInput == _G.Key then
-         MakeScriptHub()
-         CorrectKeyNotifications()
-     else
-        WrongKeyNotifications()
+            MakeScriptHub()
+            CorrectKeyNotifications()
+        else
+            WrongKeyNotifications()
         end
-  	end    
+    end    
 })
+
+Tab:AddButton({
+    Name = "Discord",
+    Callback = function()
+        -- Função para copiar texto para a área de transferência
+local function copyToClipboard(text)
+    if setclipboard then
+        setclipboard(text)
+        print("Texto copiado para a área de transferência: " .. text)
+    else
+        print("Não foi possível copiar o texto para a área de transferência.")
+    end
+end
+
+-- Exemplo de uso para copiar o texto "discord"
+copyToClipboard("https://discord.gg/9ER6CcBHAQ")
+    end    
+})
+
 
