@@ -1,0 +1,80 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Nikss HUB KEY", HidePremium = true, SaveConfig = true, ConfigFolder = "Orion"})
+
+OrionLib:MakeNotification({
+    Name = "Nikss HUB Key",
+    Content = "Key In Discord nik#3699",
+    Image = "rbxassetid://4483345998",
+    Time = 5
+})
+
+_G.Key = "My_Show, porquin910" -- Você coloca sua chave aqui
+_G.KeyInput = "string"
+
+function MakeScriptHub()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NIkss231421/Fisch-Script/refs/heads/main/Nikss%20HUB%20FISCH"))()
+end
+
+function CorrectKeyNotifications()
+    OrionLib:MakeNotification({
+        Name = "Senha Correta",
+        Content = "Iniciando Nikss HUB",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+    })
+    Window:Hide() -- Esconder a janela quando a chave estiver correta
+end
+
+function WrongKeyNotifications()
+    OrionLib:MakeNotification({
+        Name = "Wrong Key",
+        Content = "Senha Incorreta ou Nao esta mais Funcionando",
+        Image = "rbxassetid://4483345998",
+        Time = 20
+    })
+end
+
+local Tab = Window:MakeTab({
+    Name = "Nikss KEY",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab:AddTextbox({
+    Name = "Enter Key",
+    Default = "",
+    TextDisappear = true,
+    Callback = function(Value)
+        _G.KeyInput = Value
+    end   
+})
+
+Tab:AddButton({
+    Name = "Check Key!",
+    Callback = function()
+        if _G.KeyInput == _G.Key then
+            MakeScriptHub()
+            CorrectKeyNotifications()
+        else
+            WrongKeyNotifications()
+        end
+    end    
+})
+
+Tab:AddButton({
+    Name = "Discord",
+    Callback = function()
+        -- Função para copiar texto para a área de transferência
+        local function copyToClipboard(text)
+            if setclipboard then
+                setclipboard(text)
+                print("Texto copiado para a área de transferência: " .. text)
+            else
+                print("Não foi possível copiar o texto para a área de transferência.")
+            end
+        end
+
+        -- Exemplo de uso para copiar o texto "discord"
+        copyToClipboard("https://discord.gg/9ER6CcBHAQ")
+    end    
+})
