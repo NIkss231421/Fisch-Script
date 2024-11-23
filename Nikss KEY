@@ -85,7 +85,33 @@ Tab:AddButton({
             end
         end
 
+        -- Exemplo de uso para copiar o texto "Key"
+        copyToClipboard("https://link-center.net/1258363/nikss-hub-key1")
+
+        OrionLib:MakeNotification({
+            Name = "Nikss HUB Key",
+            Content = "Website for copied key",
+            Image = "rbxassetid://4483345998",
+            Time = 15
+        })
+
+    end    
+})
+
+Tab:AddButton({
+    Name = "Discord",
+    Callback = function()
+        -- Função para copiar texto para a área de transferência
+        local function copyToClipboard(text)
+            if setclipboard then
+                setclipboard(text)
+                print("Texto copiado para a área de transferência: " .. text)
+            else
+                print("Não foi possível copiar o texto para a área de transferência.")
+            end
+        end
+
         -- Exemplo de uso para copiar o texto "discord"
-        copyToClipboard("https://discord.gg/9ER6CcBHAQ")
+        copyToClipboard("https://discord.gg/UXZGT5FpQn")
     end    
 })
