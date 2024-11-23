@@ -73,7 +73,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-    Name = "Discord",
+    Name = "Website Key",
     Callback = function()
         -- Função para copiar texto para a área de transferência
         local function copyToClipboard(text)
