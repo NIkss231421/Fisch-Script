@@ -1,3 +1,5 @@
+-- Script Nikss
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Nikss HUB KEY", HidePremium = true, SaveConfig = true, ConfigFolder = "Orion"})
 
@@ -8,29 +10,29 @@ OrionLib:MakeNotification({
     Time = 5
 })
 
-_G.Key = "My_Show" -- Você coloca sua chave aqui
-_G.KeyInput = "string"
+_G.Keys = {"My_Show", "porquin910", "NikssHUB832jfauhs81198421561fda"} -- Você coloca suas chaves aqui
+_G.KeyInput = ""
 
 function MakeScriptHub()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/NIkss231421/Fisch-Script/refs/heads/main/--%20Nikss%20HUB%20Fisch%20--.txt"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NIkss231421/Fisch-Script/refs/heads/main/Nikss%20HUB%20FISCH"))()
 end
 
 function CorrectKeyNotifications()
     OrionLib:MakeNotification({
-        Name = "Correct Key",
+        Name = "Senha Correta",
         Content = "Iniciando Nikss HUB",
         Image = "rbxassetid://4483345998",
         Time = 5
     })
-    Window:Hide() -- Esconder a janela quando a chave estiver correta
+    Window:Set("Visible", 0) -- Tornar a janela invisível quando a chave estiver correta
 end
 
 function WrongKeyNotifications()
     OrionLib:MakeNotification({
         Name = "Wrong Key",
-        Content = "Sua senha está errada. Você é amigo do Nikss?",
+        Content = "Senha Incorreta ou Nao esta mais Funcionando",
         Image = "rbxassetid://4483345998",
-        Time = 5
+        Time = 20
     })
 end
 
@@ -52,9 +54,18 @@ Tab:AddTextbox({
 Tab:AddButton({
     Name = "Check Key!",
     Callback = function()
-        if _G.KeyInput == _G.Key then
+        local keyFound = false
+        for _, key in ipairs(_G.Keys) do
+            if _G.KeyInput == key then
+                keyFound = true
+                break
+            end
+        end
+
+        if keyFound then
             MakeScriptHub()
             CorrectKeyNotifications()
+            Window:Set("Visible", 0) -- Tornar a janela invisível quando a chave estiver correta
         else
             WrongKeyNotifications()
         end
