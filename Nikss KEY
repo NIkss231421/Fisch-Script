@@ -5,12 +5,12 @@ local Window = OrionLib:MakeWindow({Name = "Nikss HUB KEY", HidePremium = true, 
 
 OrionLib:MakeNotification({
     Name = "Nikss HUB Key",
-    Content = "Key In Discord nik3699",
+    Content = "Key In Discord nik#3699",
     Image = "rbxassetid://4483345998",
     Time = 5
 })
 
-_G.Keys = {"My_Show", "porquin910"} -- Você coloca suas chaves aqui
+_G.Keys = {"My_Show", "porquin910", "NikssHUB832jfauhs81198421561fda"} -- Você coloca suas chaves aqui
 _G.KeyInput = ""
 
 function MakeScriptHub()
@@ -24,7 +24,7 @@ function CorrectKeyNotifications()
         Image = "rbxassetid://4483345998",
         Time = 5
     })
-    Window:Destroy() -- Esconder a janela quando a chave estiver correta
+    Window:Set("Visible", 0) -- Tornar a janela invisível quando a chave estiver correta
 end
 
 function WrongKeyNotifications()
@@ -65,6 +65,7 @@ Tab:AddButton({
         if keyFound then
             MakeScriptHub()
             CorrectKeyNotifications()
+            Window:Set("Visible", 0) -- Tornar a janela invisível quando a chave estiver correta
         else
             WrongKeyNotifications()
         end
