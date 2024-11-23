@@ -90,7 +90,7 @@ Tab:AddButton({
 
         OrionLib:MakeNotification({
             Name = "Nikss HUB Key",
-            Content = "Website for copied key",
+            Content = "Copied Website for key",
             Image = "rbxassetid://4483345998",
             Time = 15
         })
