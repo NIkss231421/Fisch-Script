@@ -2913,7 +2913,7 @@ do -- INFO FISH
 		["Enchant Relic"] = {
 			WeightPool = {210, 210};
 			Chance = 0.2;
-			Rarity = "Relic";
+			Rarity = "";
 			Resilience = 35;
 			ProgressEfficiency = 0.8;
 			Description = "A stone filled with the blessing of a Divine Lantern Keeper.. Returning it to it's throne under the Statue of Sovereignty will result in your currently equipped rod being engulfed in its power.";
@@ -3872,6 +3872,16 @@ Shoppy:AddButton({
     end
 })
 
+-- Teleporting button for "Relic Rod"
+Shoppy:AddButton({
+    Title = "Relic Rod",
+    Description = "Cost [8.000C$]",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4097.7685546875, 39.698524475097656, 31.088254928588867)
+    end
+})
+
+
 -- Teleporting button for "Trident Rod"
 Shoppy:AddButton({
     Title = "Trident Rod",
@@ -4144,6 +4154,15 @@ Teleporting:AddButton({
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2481.27587890625, 133.25001525878906, 1559.8189697265625)
     end
 })
+
+-- Teleporting button for "Archeologica Site"
+Teleporting:AddButton({
+    Title = "Archeologica Site",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4031.09619140625, 131.497314453125, 78.72515106201172)
+    end
+})
+
 
 -- Teleporting button for "The Depths"
 Teleporting:AddButton({
