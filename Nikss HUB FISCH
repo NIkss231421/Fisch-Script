@@ -4181,6 +4181,15 @@ Teleporting:AddButton({
     end
 })
 
+-- Teleporting button for "Snowcap spot"
+Teleporting:AddButton({
+    Title = "Snowcap Spot",
+    Description = "Spot to Calarmar Colossal",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2822.11328125, 130.2967071533203, 2696.102783203125)
+    end
+})
+
 -- Teleporting button for "Forsaken Shores Spot"
 Teleporting:AddButton({
     Title = "Forsaken Shores Spot",
