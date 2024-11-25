@@ -4275,7 +4275,7 @@ do
 			Title = "Join Discord Nikss HUB",
 			Description = "Click to join",
 			Callback = function()
-                setclipboard("https://discord.gg/9ER6CcBHAQ")
+                setclipboard("https://discord.gg/UXZGT5FpQn")
 			end,
 		})
 	end
