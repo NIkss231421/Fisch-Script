@@ -10,7 +10,7 @@ OrionLib:MakeNotification({
     Time = 5
 })
 
-_G.Keys = {"My_Show", "porquin910", "NikssHUB832jfauhs81198421561fda"} -- Você coloca suas chaves aqui
+_G.Keys = {"My_Show", "porquin910", "NiksHUB-4F7J-K9L3-V1Z8"} -- Você coloca suas chaves aqui
 _G.KeyInput = ""
 
 function MakeScriptHub()
