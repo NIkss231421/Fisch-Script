@@ -86,7 +86,7 @@ Tab:AddButton({
         end
 
         -- Exemplo de uso para copiar o texto "Key"
-        copyToClipboard("https://link-center.net/1258363/nikss-hub-key1")
+        copyToClipboard("https://link-center.net/1258363/key-on-nikss-hub1")
 
         OrionLib:MakeNotification({
             Name = "Nikss HUB Key",
